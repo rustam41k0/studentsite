@@ -1,0 +1,41 @@
+.main {
+    padding-top: 100px;
+    text-align: center;
+}
+
+.main h5 {
+    padding-bottom: 10px;
+}
+
+.title {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.one-project {
+    padding-bottom: 20px;
+    text-decoration: none;
+}
+
+.image {
+    /*padding-bottom: 20px;*/
+    padding-top: 20px;
+    width: 400px;
+    height: 300px;
+}
+
+.back {
+    display: flex;
+    padding-top: 10px;
+    padding-left: 10px;
+    text-decoration: none;
+}
+
+.profile-url {
+    text-decoration: none;
+}
+
+.description {
+    padding-top: 20px;
+    text-align: left;
+}

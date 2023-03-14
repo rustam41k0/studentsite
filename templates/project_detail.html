@@ -1,10 +1,31 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Project detail</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mycss.css' %}">
 </head>
 <body>
+<a class="back" href='{% url 'all_projects' %}'><h5>На главную</h5></a>
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
 
+        <div class="col-4 main">
+            <h1>{{ object.title }}</h1><br>
+            Автор: <a class='profile-url'
+                      href="{% url 'profile' object.author.user.id %}">{{ object.author.user }}
+                    </a><br>
+            <img class="image" src="{{ object.image.url }}" alt="*image*"><br>
+            <p class="description">{{ object.description }}</p><br>
+        </div>
+
+        <div class="col-4"></div>
+    </div>
+</div>
+
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>
