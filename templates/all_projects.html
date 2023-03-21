@@ -18,6 +18,7 @@
             {% for p in projects %}
                 <a class="one-project" href="{% url 'project' p.id %}">
                     <h3>{{ p.title }}</h3>
+                    <p style="color: black">{{ p.description|truncatechars:140 }}</p>
                 </a><br>
             {% endfor %}
         {% else %}
@@ -25,7 +26,15 @@
         {% endif %}
 
         </div>
-        <div class="col-4"></div>
+        <div class="col-4" style="text-align: right">
+            {% if user.is_authenticated %}
+            	<a class="nav-item nav-link" href="{% url 'profile' user.id  %}"><h3>{{ user.username }}</h3></a>
+            	<a class="nav-item nav-link" href="{% url 'logout' %}"><h3>Выход</h3></a>
+          	{% else %}
+            	<a class="nav-item nav-link" href="{% url 'login' %}"><h3>Вход</h3></a>
+            	<a class="nav-item nav-link" href="{% url 'register' %}"><h3>Регистрация</h3></a>
+          	{% endif %}
+        </div>
     </div>
 </div>
 

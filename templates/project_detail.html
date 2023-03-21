@@ -12,11 +12,11 @@
 <div class="container">
     <div class="row">
         <div class="col-4"></div>
-
+{##}
         <div class="col-4 main">
             <h1>{{ object.title }}</h1><br>
             Автор: <a class='profile-url'
-                      href="{% url 'profile' object.author.user.id %}">{{ object.author.user }}
+                      href="{% url 'profile' object.author.id %}">{{ object.author.user.username }}
                     </a><br>
             <img class="image" src="{{ object.image.url }}" alt="*image*"><br>
             <p class="description">{{ object.description }}</p><br>
